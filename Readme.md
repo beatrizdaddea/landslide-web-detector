@@ -15,17 +15,25 @@ This web application is designed to detect and monitor landslides in real-time. 
   ```
 
 2. Install the required dependencies:
-
+- Install OpenCV
   ```bash
-
+  pip install opencv-python
   ```
 
-3. Configure the application by updating the necessary settings in the `.env` file.
+- Install Flask
+  ```bash
+    pip install Flask
+  ```
 
-4. Start the application:
+- Install Ultralytics/Yolo
+  ```bash
+  pip install ultralytics
+  ```
+
+3. Start the application:
 
   ```bash
-
+    flask --app yolo_app.py run --host=0.0.0.0
   ```
 
 ## Usage
