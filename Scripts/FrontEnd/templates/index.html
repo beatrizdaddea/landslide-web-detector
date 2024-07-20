@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+    {% endblock stylesheets %}
+    <title>HomePage</title>
+
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="#informacoes">Informações</a>
+        <a href="#sobre-nos">Sobre Nós</a>
+        <a href="#duvidas">Dúvidas</a>
+    </div>
+    <div class="content">
+        <h1>Landslide Detector</h1>
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" class="file-input" name="file" id="file-upload" accept="image/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+</html>
+

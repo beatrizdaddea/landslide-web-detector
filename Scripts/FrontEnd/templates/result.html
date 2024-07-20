@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/result.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    {% endblock stylesheets %}
+    <title>Resultados</title>
+</head>
+<body>
+    <nav>
+        <a href="{{ url_for('home') }}">
+            <i class="fa fa-arrow-left"> Home </i>
+        </a>
+    </nav>
+    <h1> Resultado da Segmentação </h1>
+    <div class="image-container">
+        <div class="original-image">
+            <h2> Imagem Original </h2>
+            <img src="data:image/png;base64,{{ original_img_data }}" alt="Original Image">
+        </div>
+        <div class="grayscale-image">
+            <h2> Imagem Detectada </h2>
+            <img src="data:image/png;base64,{{ detection_img_data }}" alt="Detection Image">
+        </div>
+    </div>
+</body>
+</html>
