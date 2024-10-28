@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block stylesheets %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    {% endblock %}
+    <title>Informações</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="{{ url_for('home') }}"><i class="fa fa-house"></i> Inicial</a>
+      <a href="{{ url_for('info') }}"><i class="fa fa-info"></i> Informações</a>
+      <a href="{{ url_for('sobre_nos') }}"><i class="fa fa-users"></i> Sobre Nós</a>
+      <a href="{{ url_for('duvida') }}" class="link-active"><i class="fa fa-circle-question"></i> Dúvidas</a>
+    </div>
+    <div class="container-info">
+      <h2 class="title-info">Dúvidas</h2>
+      <div>
+        <h3>Tutorial de Upload de Imagem</h1>
+    
+        <div class="tutorial-step">
+            <h4>Passo 1: Escolher Imagem</h4>
+            <p>Selecione a imagem que deseja enviar. Clique no botão para escolher a imagem do seu dispositivo.</p>
+            <img src="static/images/questions-page/img-input.png" alt="Escolher Imagem">
+        </div>
+    
+        <div class="tutorial-step">
+            <h4>Passo 2: Fazer o Upload</h4>
+            <p>Após selecionar a imagem, clique no botão para fazer o upload da imagem para o servidor.</p>
+            <img src="static/images/questions-page/upload-btn.png" alt="Fazer o Upload">
+        </div>
+    
+        <div class="tutorial-step__result-image">
+            <h4>Passo 3: Resultado</h4>
+            <p>Veja o resultado após o upload. A imagem será exibida conforme o esperado.</p>
+            <img src="static/images/questions-page/result.jpeg" alt="Resultado" class="result-image">
+        </div>
+    </div>
+  </body>
+</html>

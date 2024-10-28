@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block stylesheets %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    {% endblock %}
+    <title>Informações</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="{{ url_for('home') }}"><i class="fa fa-house"></i> Inicial</a>
+      <a href="{{ url_for('info') }}"><i class="fa fa-info"></i> Informações</a>
+      <a href="{{ url_for('sobre_nos') }}" class="link-active"><i class="fa fa-users"></i> Sobre Nós</a>
+      <a href="{{ url_for('duvida') }}"><i class="fa fa-circle-question"></i> Dúvidas</a>
+    </div>
+    <div class="container-info">
+      <h2 class="title-info">Sobre Nós</h2>
+      <div>
+        <p>
+            Beatriz Chieffi Failla D’Addea<br />
+            Kaique Martins De Paula <br />
+            Mateus Henrique Da Silva Pavesi <br />
+            Milena Miyuki Tatekawa Da Silva <br />
+            Rafael Elio Maciel Souza
+          </p>
+        <p>Orientador: <br />Prof. André Y. Kusumoto</p>
+        <img class="img-logo" src="{{ url_for('static', filename='images/unip-logo.png') }}" alt="UNIP Logo" />
+      </div>
+    </div>
+  </body>
+</html>

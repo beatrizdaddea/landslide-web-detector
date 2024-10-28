@@ -1,0 +1,103 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.btn-submit,
+.file-input-label {
+  display: block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  height: 50px;
+  box-sizing: border-box;
+  text-align: center;
+  align-content: center;
+  margin-bottom: 10px;
+}
+
+.btn-submit:hover,
+.file-input-label:hover {
+  background-color: #3d8f41;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+  position: relative;
+}
+
+.file-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.container-file-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label i {
+  margin-right: 8px;
+}
+
+.file-name {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.file-format-info {
+  margin-left: 35em;
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    text-align: center;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-radius: 0;
+    border-right: none;
+  }
+
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}

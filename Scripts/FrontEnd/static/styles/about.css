@@ -1,0 +1,68 @@
+/* Estilos gerais */
+.container-info {
+    margin-left: 250px;
+}
+
+.container-info p {
+    text-align: center;
+    width: 80%;
+    margin: 1.5rem auto;
+}
+
+.container-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-info {
+    text-align: center;
+    color: #242424;
+    width: 85%;
+    margin: 2rem auto;
+    padding: .5rem;
+}
+
+.img-logo {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 10rem;
+    height: auto;
+    margin: 0;
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (max-width: 768px) {
+    .container-info {
+        margin-left: 0;
+        padding: 0 1rem;
+    }
+
+    .title-info {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    .container-info p {
+        width: 100%;
+    }
+
+    .img-logo {
+        width: 6.25rem;
+        height: auto;
+        margin-top: 1rem;
+        position: static; 
+    }
+}
+
+@media (max-width: 576px) {
+    .img-logo {
+        display: block;
+        margin-top: 1rem;
+        width: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block stylesheets %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/info.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    {% endblock %}
+    <title>Informações</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="{{ url_for('home') }}"><i class="fa fa-house"></i> Inicial</a>
+      <a href="{{ url_for('info') }}" class="link-active"><i class="fa fa-info"></i> Informações</a>
+      <a href="{{ url_for('sobre_nos') }}"><i class="fa fa-users"></i> Sobre Nós</a>
+      <a href="{{ url_for('duvida') }}"><i class="fa fa-circle-question"></i> Dúvidas</a>
+    </div>
+    <div class="container-info">
+      <h2 class="title-info">Informações</h2>
+      <div>
+        <p>A ocorrência de desastres naturais e ambientais é um fator difícil de ser previsto, uma vez que, na maioria das vezes, ocorre de maneira repentina, tornando-se mais trabalhoso e aumentando a complexidade da prevenção deles. Conceitualmente, os desastres naturais podem ser compreendidos como sendo quaisquer fenômenos e desequilíbrios no escopo ambiental causados em decorrência de fatores externos e sem a interferência do ser humano e, em contrapartida, os desastres ambientais são aqueles causados, em suma, pela interferência humana. (CASTRO, 1998 apud SILVA; FARIA; FILHO, 2019).</p>
+        <p>Como um dos exemplos mais notórios de desastres, naturais e ambientais, têm-se os deslizamentos de terra, os quais são uns dos mais destrutivos existentes, causando muitos estragos nas localidades em que ocorrem. Em regiões desabitadas provocam quedas de árvores e pequenas modificações geográficas no solo, mas quando acontecem em território urbano ocasionam estragos em casas, ruas, redes elétricas, no sistema de esgoto, além de soterramento de pessoas e animais com alto potencial de consequências fatais para os seres vivos (CAMPOS, 2022). Esse tipo de desastre é ocasionado mais frequentemente pelo crescimento desordenado das cidades, principalmente, pelas comunidades mais carentes, que ocupam, sem aconselhamento algum, áreas de risco. Além disso, destaca-se que são considerados três fatores principais para classificar uma área de risco, sendo eles: o tipo de solo, a declividade da encosta e a umidade do solo (DEFESA CIVIL-PR, 2024).</p>
+        <p>Por fim, segundo (SESTINI e FLORENZANO, 2004), o deslizamento de terra, mesmo que de pequeno deslocamento, tem como característica principal a produção de cicatrizes no solo, o que permite tomar medidas de combate e prevenção na localidade em que são identificadas. Nesse sentido e diante do que foi exposto, a presente laboração consiste no desenvolvimento de um software de Visão Computacional (VC) programado utilizando linguagem de programação Python que, através do processamento de imagens de satélites, procura identificar cicatrizes no solo, permitindo assim, obter informações importantes sobre quais áreas estão mais propensas à ocorrência de novos deslizamentos de terra através dos dados coletados e facilitando, dessa forma, a identificação de novas áreas de risco na região a ser considerada.</p>
+      </div>
+      <h2 class="title-info">Objetivos</h2>
+      <div>
+        <p>A identificação de cicatrizes no solo decorrente de deslocamento e deslizamento de terra é de grande importância para a antecipação de medidas para evitar desastres, porém, atualmente, as tecnologias existentes são caras e limitadas. Nesse sentido, a proposta consiste no desenvolvimento de software de VC e processamento de imagem com linguagem de programação Python que tem a pretensão de, a partir da análise de dados de imagens de satélite, conseguir identificar esses vestígios de deslizamentos de solo e prever, através do treinamento do software, a precisão na identificação das cicatrizes, contribuindo, assim, para a gestão de riscos, auxiliando no desenvolvimento de medidas de prevenção e na adoção de políticas públicas de planejamento urbano.</p>
+      </div>
+    </div>
+  </body>
+</html>

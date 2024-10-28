@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-info {
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    height: auto;
+    padding: 0 15px; /* Adiciona um padding lateral para evitar que o texto encoste nas bordas */
+}
+
+
+.container-info p {
+    text-align: justify;
+    width: 70%;
+    word-wrap: break-word;
+    margin-left: 20%;
+}
+
+.title-info {
+    text-align: center;
+    background-color: #333;
+    color: #f8f8f8;
+    width: 85%;
+    margin: 2rem auto;
+    padding: .5rem;
+    word-wrap: break-word; /* Garante que palavras longas no título também sejam quebradas */
+}
+
+@media (max-width: 768px) {
+    .container-info p {
+        width: 90%;
+    }
+
+    .title-info {
+        width: 90%;
+        margin: 1rem auto;
+        padding: .25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-info p {
+        width: 95%;
+    }
+
+    .title-info {
+        width: 95%;
+        margin: 1rem auto;
+        padding: .25rem;
+    }
+}

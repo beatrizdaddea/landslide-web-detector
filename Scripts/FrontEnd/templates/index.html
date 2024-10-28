@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% block stylesheets %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
-    {% endblock stylesheets %}
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    {% endblock %}
     <title>HomePage</title>
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="sidebar">
-        <a href="#informacoes">Informações</a>
-        <a href="#sobre-nos">Sobre Nós</a>
-        <a href="#duvidas">Dúvidas</a>
+      <a href="{{ url_for('home') }}" class="link-active"><i class="fa fa-house"></i> Inicial</a>
+      <a href="{{ url_for('info') }}"><i class="fa fa-info"></i> Informações</a>
+      <a href="{{ url_for('sobre_nos') }}"><i class="fa fa-users"></i> Sobre Nós</a>
+      <a href="{{ url_for('duvida') }}"><i class="fa fa-circle-question"></i> Dúvidas</a>
     </div>
     <div class="content">
-        <h1>Landslide Detector</h1>
-        {% if error %}
-            <p>{{ error }}</p>
-        {% endif %}
-        <form method="POST" enctype="multipart/form-data">
-            <input type="file" class="file-input" name="file" id="file-upload" accept="image/*" required>
-            <button type="submit">Upload</button>
-        </form>
+      <h1>Detector de Deslizamento de Terra</h1>
+      {% if error %}
+        <p>{{ error }}</p>
+      {% endif %}
+      <form method="POST" enctype="multipart/form-data">
+        <div class="container-form">
+          <div class="container-file-name">
+            <div class="file-input-container">
+              <label for="file-upload" class="file-input-label">
+                <i class="fa fa-file-import fa-lg"></i>
+                <span>Escolher Arquivo</span>
+              </label>
+              <input type="file" class="file-input" name="file" id="file-upload" accept="image/*" required />
+            </div>
+            <div class="file-name" id="file-name"></div>
+          </div>
+          <button type="submit" class="btn-submit"><i class="fa fa-cloud-arrow-up fa-lg"></i></button>
+        </div>
+      </form>
+      <small class="file-format-info">Apenas arquivos .png, .jpg, .jpeg, .gif são aceitos.</small>
     </div>
-</body>
+  </body>
 </html>
-
